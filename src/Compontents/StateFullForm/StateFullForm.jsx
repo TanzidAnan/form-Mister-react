@@ -1,16 +1,27 @@
+import { useState } from "react";
 
 const StateFullForm = () => {
+    const [email,setEmai] =useState(null)
     const hendleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
+        console.log(email)
+    }
+
+    const hendleEmailChange =(e) =>{
+        // console.log(e.target.value);
+        setEmai(e.target.value)
+
     }
     return (
-        <div>
+        <div className="w-6/12 mx-auto">
             <form className='bg-slate-300 p-32' onSubmit={hendleSubmit}>
                 <input className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' />
                 <br />
-                <input className='py-3 text-slate-50 mt-2' type="text" name="email" id="" placeholder='Enter Text' />
+                <input 
+                onChange={hendleEmailChange}
+                className='py-3 text-slate-50 mt-2' type="text" name="email" id="" placeholder='Enter Text' />
                 <br />
-                <input className='py-3 text-slate-50 mt-2' type="text" name="number" id="" placeholder='Enter Text' />
+                <input className='py-3 text-slate-50 mt-2' type="password" name="password" id="" placeholder='Enter Text' />
                 <br />
                 <input className='bg-orange-500 mt-3 p-2 rounded-md' type="submit" value="submit" />
             </form>
