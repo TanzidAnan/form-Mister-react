@@ -1,12 +1,17 @@
 import { useState } from "react";
 
 const StateFullForm = () => {
+    const [name,setName] =useState(null)
     const [email,setEmai] =useState(null)
     const [password,setPassword] =useState(null)
+    const hendleNameChange =e =>{
+        setName(e.target.value)
+    }
     const hendleSubmit = e => {
         e.preventDefault();
         console.log(email)
         console.log(password)
+        console.log(name)
     }
 
     const hendleEmailChange =(e) =>{
@@ -21,7 +26,9 @@ const StateFullForm = () => {
     return (
         <div className="w-6/12 mx-auto">
             <form className='bg-slate-300 p-32' onSubmit={hendleSubmit}>
-                <input className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' />
+                <input
+                onChange={hendleNameChange}
+                className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' />
                 <br />
                 <input 
                 onChange={hendleEmailChange}
