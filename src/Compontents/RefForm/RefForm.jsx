@@ -6,6 +6,9 @@ const RefForm = () => {
     const passwordRef=useRef(null)
     const hendleSubmit =e =>{
         e.preventDefault();
+        console.log(nameRef.current.value);
+        console.log(emailRef.current.value)
+        console.log(passwordRef.current.value)
     }
     return (
         <div>
@@ -15,7 +18,7 @@ const RefForm = () => {
                     <br />
                     <input ref={emailRef} className='py-3 text-slate-50 mt-2' type="text" name="email" id="" placeholder='Enter Text' />
                     <br />
-                    <input ref={passwordRef} className='py-3 text-slate-50 mt-2' type="text" name="number" id="" placeholder='Enter Text' />
+                    <input ref={passwordRef} className='py-3 text-slate-50 mt-2' type="password" name="number" id="" placeholder='Enter Text' />
                     <br />
                     <input className='bg-orange-500 mt-3 p-2 rounded-md' type="submit" value="submit" />
                 </form>
