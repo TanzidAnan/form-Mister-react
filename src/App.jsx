@@ -8,14 +8,25 @@ import ReusableForm from './Compontents/ReusableForm/ReusableForm'
 // import SimpleForm from './Compontents/SimpleForm/SimpleForm's
 
 function App() {
+
+
+  const hendleSingUpSubmit = e => {
+    e.preventDefault()
+  }
+
+  const hendleUpdetSubmit = e => {
+    e.preventDefault();
+  }
+
+
   return (
     <>
       {/* <SimpleForm></SimpleForm> */}
       {/* <StateFullForm></StateFullForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={'sign up'}></ReusableForm>
-      <ReusableForm formTitle={'profile Updete'}></ReusableForm>
+      <ReusableForm formTitle={'sign up'} hendleSubmit={hendleSingUpSubmit}></ReusableForm>
+      <ReusableForm formTitle={'profile Updete'} submitBtnText='Updete' hendleSubmit={hendleUpdetSubmit}></ReusableForm>
     </>
   )
 }
