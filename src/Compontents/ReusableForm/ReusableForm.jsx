@@ -1,11 +1,12 @@
 
-const ReusableForm = () => {
+const ReusableForm = ({formTitle}) => {
     const hendleSubmit =e =>{
         e.preventDefault()
     }
     return (
         <div>
             <div className='w-6/12 mx-auto '>
+            <h1>{formTitle}</h1>
                 <form className='bg-slate-300 p-32' onSubmit={hendleSubmit}>
                     <input className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' />
                     <br />
