@@ -26,8 +26,18 @@ function App() {
       {/* <StateFullForm></StateFullForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={'sign up'} hendleSubmit={hendleSingUpSubmit}></ReusableForm>
-      <ReusableForm formTitle={'profile Updete'} submitBtnText='Updete' hendleSubmit={hendleUpdetSubmit}></ReusableForm>
+      <ReusableForm formTitle={'sign up'} hendleSubmit={hendleSingUpSubmit}>
+        <div>
+          <h1>Sign Up</h1>
+          <p>Plice sign up right now</p>
+        </div>
+      </ReusableForm>
+      <ReusableForm formTitle={'profile Updete'} submitBtnText='Updete' hendleSubmit={hendleUpdetSubmit}>
+        <div>
+          <h1>Updete Profile</h1>
+          <p></p>
+        </div>
+      </ReusableForm>
     </>
   )
 }
