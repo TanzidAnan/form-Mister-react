@@ -2,18 +2,19 @@ import UseInputState from "../../Hooks/UseInputState";
 
 
 const HookForm = () => {
-    const [name,hendleNameChange]= UseInputState('tanzid')
+    // const [name,hendleNameChange]= UseInputState('tanzid')
+    const emailState =UseInputState('tanzid@gmail.com')
     const hendleSubmit =e =>{
         e.preventDefault()
-        console.log('tanzd',name)
+        console.log('tanzd',emailState.value)
     }
     return (
         <div>
             <div className='w-6/12 mx-auto '>
                 <form className='bg-slate-300 p-32' onSubmit={hendleSubmit}>
-                    <input value={name} onChange={hendleNameChange} className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' />
+                    {/* <input value={name} onChange={hendleNameChange} className='py-3 text-slate-50' type="text" name="name" id="" placeholder='Enter Text' /> */}
                     <br />
-                    <input className='py-3 text-slate-50 mt-2' type="text" name="email" id="" placeholder='Enter Text' />
+                    <input {...emailState} className='py-3 text-slate-50 mt-2' type="text" name="email" id="" placeholder='Enter Text' />
                     <br />
                     <input className='py-3 text-slate-50 mt-2' type="password" name="password" id="" placeholder='Enter Text' />
                     <br />

@@ -2,10 +2,16 @@ import { useState } from "react"
 
 const UseInputState =(defaultValue=null) =>{
     const [value,setValue] =useState(defaultValue);
-    const hendleChange =(vle) =>{
-        setValue(vle)
+    // const hendleChange =(e) =>{
+    //     setValue(e.target.value)
+    // }
+    const onChange =(e) =>{
+        setValue(e.target.value)
     }
-    return[value,hendleChange]
+    return{
+        value,
+        onChange
+    }
 }
 
 export default UseInputState
