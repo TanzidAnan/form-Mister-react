@@ -1,4 +1,5 @@
 
+import { data } from 'autoprefixer'
 import './App.css'
 // import HookForm from './Compontents/HookForm/HookForm'
 import ReusableForm from './Compontents/ReusableForm/ReusableForm'
@@ -10,12 +11,12 @@ import ReusableForm from './Compontents/ReusableForm/ReusableForm'
 function App() {
 
 
-  const hendleSingUpSubmit = e => {
-    e.preventDefault()
+  const hendleSingUpSubmit = data => {
+    console.log('sing up ',data)
   }
 
-  const hendleUpdetSubmit = e => {
-    e.preventDefault();
+  const hendleUpdetSubmit = data => {
+    console.log('updet data',data)
   }
 
 
