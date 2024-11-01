@@ -15,6 +15,7 @@ function App() {
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
       <ReusableForm formTitle={'sign up'}></ReusableForm>
+      <ReusableForm formTitle={'profile Updete'}></ReusableForm>
     </>
   )
 }
